@@ -1,0 +1,33 @@
+.outline {
+    
+}
+.cell {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid black;
+}
+.empty {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid black;
+}
+.forbidden {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid black;
+}
+.wallNorth {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid black;
+}
+.wallSouth {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid black;
+}
