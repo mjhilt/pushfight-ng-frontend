@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Board, BoardState } from '../boardClasses';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-board',
@@ -13,7 +14,8 @@ export class BoardComponent implements OnInit {
       player2: "Michael",
       state: new BoardState()
   }
-  constructor() { }
+
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
   }
