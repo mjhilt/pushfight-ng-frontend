@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 // This will probably get removed later
-import { BoardState, Game } from './boardClasses';
+import { BoardState, BoardStateIn, Game } from './boardClasses';
 
 @Injectable()
 export class ApiService {
@@ -29,8 +29,9 @@ export class ApiService {
     // if (extras.length) url += `?${extras.join('?')}`
     // let resp = this.http.get(url)
 
-    let initState = new BoardState()
-    let resp = new Game('1234', 'greg', 'started', initState, 'white')
+    let apiState = new BoardStateIn()
+    let feState = BoardState.fromBoardIn(apiState)
+    let resp = new Game('1234', 'greg', 'started', feState, 'white')
     return resp
   }
 }

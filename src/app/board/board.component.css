@@ -1,33 +1,28 @@
 .outline {
-    
+}
+.row {
+    width: 480px;
+    height: 48px;
+    white-space: nowrap;
 }
 .cell {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 2px solid black;
+    width: 44px;
+    height: 44px;
+    margin: 0px;
+    border: 2px solid gray;
+    display: table-cell;
 }
 .empty {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 2px solid black;
+    border: 2px dashed gray;
 }
 .forbidden {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 2px solid black;
+    width: 48px;
+    height: 48px;
+    border: none;
 }
 .wallNorth {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 2px solid black;
+    border-top: 2px solid black;
 }
 .wallSouth {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
 }

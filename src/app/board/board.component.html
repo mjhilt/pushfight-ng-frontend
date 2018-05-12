@@ -10,60 +10,60 @@
 
 
 <!-- Here is where the board goes -->
-<!-- TODO: Make the board class hidden until we load a game-->
-<div class="board">
+<button  (click)="start_game()">Start!</button>
+<div *ngIf="game" class="board">
     <h1> Game {{board.id}} </h1>
     <h2>{{board.player1}} vs {{board.player2}}</h2>
-    <button  (click)="start_game()">Start!</button>
 
     <p> {{game.color}} </p>
-<div class=outline>
-    hello
-<!--     <div class=row>
-        <div class=forbidden/>
-        <div class=empty/>
-        <div class=empty/>
-        <div class=wallNorth/>
-        <div class=wallNorth/>
-        <div class=wallNorth/>
-        <div class=wallNorth/>
-        <div class=wallNorth/>
-        <div class=empty/>
-        <div class=forbidden/>
+    <div class=outline>
+        <div class=row>
+            <div class="cell forbidden">{{game.state.rows[0].values[0]}}</div>
+            <div class="cell empty">{{game.state.rows[0].values[1]}}</div>
+            <div class="cell empty">{{game.state.rows[0].values[2]}}</div>
+            <div class="cell wallNorth">{{game.state.rows[0].values[3]}}</div>
+            <div class="cell wallNorth">{{game.state.rows[0].values[4]}}</div>
+            <div class="cell wallNorth">{{game.state.rows[0].values[5]}}</div>
+            <div class="cell wallNorth">{{game.state.rows[0].values[6]}}</div>
+            <div class="cell wallNorth">{{game.state.rows[0].values[7]}}</div>
+            <div class="cell empty">{{game.state.rows[0].values[8]}}</div>
+            <div class="cell forbidden">{{game.state.rows[0].values[9]}}</div>
+        </div>
+        <div class=row>
+            <div class="cell empty">{{game.state.rows[1].values[0]}}</div>
+            <div class="cell">{{game.state.rows[1].values[1]}}</div>
+            <div class="cell">{{game.state.rows[1].values[2]}}</div>
+            <div class="cell">{{game.state.rows[1].values[3]}}</div>
+            <div class="cell">{{game.state.rows[1].values[4]}}</div>
+            <div class="cell">{{game.state.rows[1].values[5]}}</div>
+            <div class="cell">{{game.state.rows[1].values[6]}}</div>
+            <div class="cell">{{game.state.rows[1].values[7]}}</div>
+            <div class="cell">{{game.state.rows[1].values[8]}}</div>
+            <div class="cell empty">{{game.state.rows[1].values[9]}}</div>
+        </div>
+        <div class=row>
+            <div class="cell empty">{{game.state.rows[2].values[0]}}</div>
+            <div class="cell">{{game.state.rows[2].values[1]}}</div>
+            <div class="cell">{{game.state.rows[2].values[2]}}</div>
+            <div class="cell">{{game.state.rows[2].values[3]}}</div>
+            <div class="cell">{{game.state.rows[2].values[4]}}</div>
+            <div class="cell">{{game.state.rows[2].values[5]}}</div>
+            <div class="cell">{{game.state.rows[2].values[6]}}</div>
+            <div class="cell">{{game.state.rows[2].values[7]}}</div>
+            <div class="cell">{{game.state.rows[2].values[8]}}</div>
+            <div class="cell empty">{{game.state.rows[2].values[9]}}</div>
+        </div>
+        <div class=row>
+            <div class="cell forbidden">{{game.state.rows[3].values[0]}}</div>
+            <div class="cell empty">{{game.state.rows[3].values[1]}}</div>
+            <div class="cell wallSouth">{{game.state.rows[3].values[2]}}</div>
+            <div class="cell wallSouth">{{game.state.rows[3].values[3]}}</div>
+            <div class="cell wallSouth">{{game.state.rows[3].values[4]}}</div>
+            <div class="cell wallSouth">{{game.state.rows[3].values[5]}}</div>
+            <div class="cell wallSouth">{{game.state.rows[3].values[6]}}</div>
+            <div class="cell empty">{{game.state.rows[3].values[7]}}</div>
+            <div class="cell empty">{{game.state.rows[3].values[8]}}</div>
+            <div class="cell forbidden">{{game.state.rows[3].values[9]}}</div>
+        </div>
     </div>
-    <div class=row>
-        <div class=empty/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=empty/>
-    </div>
-    <div class=row>
-        <div class=empty/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=cell/>
-        <div class=empty/>
-    </div>
-    <div class=row>
-        <div class=forbidden/>
-        <div class=empty/>
-        <div class=wallSouth/>
-        <div class=wallSouth/>
-        <div class=wallSouth/>
-        <div class=wallSouth/>
-        <div class=wallSouth/>
-        <div class=empty/>
-        <div class=empty/>
-        <div class=forbidden/>
-    </div> -->
-</div>
 </div>
