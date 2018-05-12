@@ -1,8 +1,22 @@
-<h1> Game {{board.id}} </h1>
-<h2>{{board.player1}} vs {{board.player2}}</h2>
+<!-- Here's an example of how to get a list of current games -->
+<h1> Game Selection </h1>
+<button  (click)="get_games()">Get list of games</button>
+<h2>Games</h2>
+<ul>
+  <li *ngFor="let game of games">
+    <span class="badge">{{game.name}}</span> {{game.opponent}}
+  </li>
+</ul>
 
-<button  (click)="api.get_games()">Press me</button>
 
+<!-- Here is where the board goes -->
+<!-- TODO: Make the board class hidden until we load a game-->
+<div class="board">
+    <h1> Game {{board.id}} </h1>
+    <h2>{{board.player1}} vs {{board.player2}}</h2>
+    <button  (click)="start_game()">Start!</button>
+
+    <p> {{game.color}} </p>
 <div class=outline>
     hello
 <!--     <div class=row>
@@ -51,4 +65,5 @@
         <div class=empty/>
         <div class=forbidden/>
     </div> -->
+</div>
 </div>

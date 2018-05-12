@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Board, BoardState } from '../boardClasses';
+import { Board, BoardState, Game } from '../boardClasses';
+import { GameList } from '../miscClasses';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -15,9 +16,22 @@ export class BoardComponent implements OnInit {
       state: new BoardState()
   }
 
+  games: GameList[]
+  game: Game
+
   constructor(private api: ApiService) { }
 
   ngOnInit() {
+  }
+
+  get_games(){
+    let games = this.api.get_games()
+    this.games = games;
+  }
+
+  start_game(){
+    let game = this.api.start_game()
+    this.game = game
   }
 
 }

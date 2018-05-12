@@ -1,4 +1,4 @@
-export class BoardState {
+export class BoardStateIn {
     wp1: number[];
     wp2: number[];
     wp3: number[];
@@ -24,12 +24,54 @@ export class BoardState {
         this.bm2 = [1,6];
         this.anchor = [0,0];
     }
-
 }
+
+
+export class BoardRow {
+    row: number;
+    values: string[];
+
+    constructor(row: number, values: string[]){
+        if (!(row >= 0 && row <= 4)) throw new Error('Bad board row');
+        this.row = row;
+
+        // Could do validation here too
+        this.values = values;
+    }
+}
+
+export class BoardState {
+    rows: BoardRow[];
+
+    constructor(){
+    }
+
+    fromBoardIn(input: BoardStateIn){
+        
+    }
+}
+
 
 export class Board {
     id: number;
     player1: string;
     player2: string;
     state: BoardState;
+}
+
+
+export class Game {
+    game: string;
+    user: string;
+    status: string;
+    state: BoardState;
+    color: string;
+
+    constructor(game: string, user: string, status: string, state: BoardState, color:string){
+        this.game = game;
+        this.user = user;
+        this.status = status;
+        this.state = state;
+        this.color = color;
+    }
 }
